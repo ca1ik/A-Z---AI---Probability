@@ -9,9 +9,9 @@ data = pd.read_csv('C:/Users/user/Documents/GitHub/A-Z---AI---Probability/letter
 train_data = data.iloc[:16000]  # İlk 16.000 satır
 test_data = data.iloc[16000:]   # Son 4.000 satır
 
-# Eğitim verisinin genel istatistiklerini kontrol et
+# Vrisinin genel istatistiklerini kontrol et
 print(train_data.describe())
-# Öncül olasılıkları hesapla
+# Priority and possiblity
 prior_probs = train_data['Letter'].value_counts(normalize=True)
 print(prior_probs)
 def calculate_conditional_probs(train, feature, laplace_smoothing=True):
